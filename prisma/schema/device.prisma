@@ -1,0 +1,6 @@
+model Device {
+  id     Int    @id @default(autoincrement())
+  label  String
+  userId Int
+  user   User   @relation(fields: [userId], references: [id])
+}
